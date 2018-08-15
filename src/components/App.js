@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from './actions';
+
 import Header from './Header';
 import Signin from './Signin';
 
@@ -14,10 +17,12 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <Route path="/" exact component={ Landing } />
-            <Route path="/signin" component={ Signin } />
-            <Route path="/signout" component={ Signout } />
-            <Route path="/dashboard" component={ Dashboard } />
+            <div className="container">
+              <Route path="/" exact component={ Landing } />
+              <Route path="/signin" component={ Signin } />
+              <Route path="/signout" component={ Signout } />
+              <Route path="/dashboard" component={ Dashboard } />
+            </div>
           </div>
         </BrowserRouter>
       </div>
@@ -25,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, actions)(App);
