@@ -14,9 +14,7 @@ Mongoose ORM
 Authentication (Token)
 PassportJS
 JWT
-Brypt
-
-Swagger UI -> API Documentation
+Bcrypt
 
 Development App on Heroku
 
