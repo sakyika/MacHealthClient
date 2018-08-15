@@ -1,7 +1,7 @@
 ## FrontEnd Client McMaster Health
 
 - Tech Stack
-React (Bootstrap)
+[React (Bootstrap)]
 Redux - Redux Thunk
 Babel Webpack
 create-react-app boilerplate
