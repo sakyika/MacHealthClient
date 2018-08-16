@@ -1,6 +1,15 @@
 ## FrontEnd Client McMaster Health
 
-- Tech Stack
+# Authentication
+Kaelan
+email: moatka@mcmaster.ca
+password: 12345
+
+Patrick
+email: emondpd@mcmaster.ca
+password": 12345
+
+#Tech Stack
 [React (Bootstrap)]
 Redux - Redux Thunk
 Babel Webpack
