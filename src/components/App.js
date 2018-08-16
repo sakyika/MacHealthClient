@@ -5,9 +5,8 @@ import * as actions from './actions';
 
 import Header from './Header';
 import Signin from './Signin';
-
-const Dashboard = () => <h2>Dashboard</h2>
-const Signout = () => <h2>Signout</h2>
+import Signout from './Signout';
+import Dashboard from './Dashboard';
 const Landing = () => <h2>Landing</h2>
 
 class App extends Component {

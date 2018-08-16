@@ -6,13 +6,15 @@ import * as actions from './actions';
 
 class Signin extends Component {
 
+    gotoDashboard = () => this.props.history.push('/dashboard');
+
     handleSubmit({ email, password }) {
-        this.props.signin({ email, password }, console.log);
+        this.props.signin({ email, password }, this.gotoDashboard);
     }
     
     render() {
 
-        const { handleSubmit, fields: { email, password } } = this.props;
+        const { handleSubmit } = this.props;
 
         return (
             <form onSubmit={ handleSubmit(this.handleSubmit.bind(this)) } >
