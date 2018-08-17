@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
+import Register from './Register';
+import Confirmation from './Confirmation';
 import Signin from './Signin';
 import Signout from './Signout';
 import Dashboard from './Dashboard';
@@ -18,6 +20,8 @@ class App extends Component {
             <Header />
             <div className="container">
               <Route path="/" exact component={ Landing } />
+              <Route path="/register" component={ Register } />
+              <Route path="/confirmation" component={ Confirmation } />
               <Route path="/signin" component={ Signin } />
               <Route path="/signout" component={ Signout } />
               <Route path="/dashboard" component={ Dashboard } />

@@ -16,7 +16,11 @@ class Header extends Component {
             );
         } else {
             return (
-                <Link to="/signin">Sign in</Link>
+                <div>
+                    <Link to="/signin">Sign in</Link>
+                    <span> </span>
+                    <Link to="/register">Register</Link>
+                </div>
             );
         }
     }

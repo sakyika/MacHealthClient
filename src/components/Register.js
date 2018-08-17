@@ -4,12 +4,12 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-class Signin extends Component {
+class Register extends Component {
 
-    gotoDashboard = () => this.props.history.push('/dashboard');
+    gotoSignin = () => this.props.history.push('/signin');
 
     handleSubmit({ email, password }) {
-        this.props.signin({ email, password }, this.gotoDashboard);
+        this.props.signup({ email, password }, this.gotoSignin);
     }
     
     render() {
@@ -18,7 +18,7 @@ class Signin extends Component {
 
         return (
             <div>
-            <h1>Sign In</h1>
+            <h1>Register</h1>
             <form onSubmit={ handleSubmit(this.handleSubmit.bind(this)) } >
                 <fieldset className="form-group">
                 <label>Email</label>
@@ -40,9 +40,9 @@ class Signin extends Component {
                     className="form-control"
                 />
                 </fieldset>
-                <div>{this.props.errorMessage}</div>
+                {/*<div>{this.props.errorMessage}</div>*/}
                 <br />
-                <button action="submit" className="btn btn-primary">Sign In!</button>
+                <button action="submit" className="btn btn-primary">Register</button>
             </form>
             </div>
         );
@@ -58,4 +58,4 @@ export default compose(
     reduxForm({ 
         form: 'signin', 
         fields: ['email', 'password'] 
-    })) (Signin);
+    })) (Register);
